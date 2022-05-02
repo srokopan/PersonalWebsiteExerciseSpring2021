@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+
+body { background-color:floralwhite; }
+
+.A { background-color:bisque; height:50px; width:100%; border-radius:10px; display:flex; jystify-items:center; align-items:center; }
+a { position:relative; left:20px; font-family:"lucida console",monaco; transition:transform 1s; font-size:20px; text-align:center; display:block; float:left; margin:0px 14px; padding:6px; border:2px solid sienna; color:sienna; border-radius:10px; text-decoration:none; }
+a:hover { background-color:sienna; color:black; transform:scale(1.2,1.2); } 
+
+#SV { background-color:gold; border:4px solid sienna; font-weight:bold; }
+#SV:hover { background-color:sienna; } 
+
+text { font-size:20px; font-family:"Comic Sans MS",cursive; text-shadow:1px 1px 1px bisque,2px 2px 2px sienna; }
+
+#rect { position:relative; top:170px; left:500px;  animation:first 20s infinite ease-out alternate; cursor:not-allowed; }
+@keyframes first { from { transform:scale(1,1); fill:gold; }
+to { transform:scale(3,3); fill:bisque; } }
+
+#triangle { position:relative; top:25px; animation:second 30s infinite linear alternate; cursor:not-allowed; }
+@keyframes second { 0% { transform:rotate(0deg); left:0px; } 
+25% { transform:rotate(90deg); left:350px; } 
+50% { transform:rotate(180deg); left:700px; } 
+75% { transform:rotate(270deg); left:1050px; } 
+100% { transform:rotate(360deg); left:1400px; } } 
+
+#circle { position:relative; top:550px; left:-100px; animation:third 20s infinite linear alternate; cursor:not-allowed; }
+@keyframes third { 0% { transform:translate(0px,0px); }
+20% { transform:translate(300px,-220px); }
+40% { transform:translate(750px,10px); }
+60% { transform:translate(1000px,-220px); }
+80% { transform:translate(1200px,10px); }
+100% { transform:translate(1400px,-220px); } }
+
+#circle:hover { animation-play-state:paused; }
+#rect:hover { animation-play-state:paused; }
+#triangle:hover { animation-play-state:paused; }
+
+
+</style>
+</head>
+
+<body>
+
+<div class="A">
+<a href="index.html">Home</a>
+<a href="sources.html">Sources</a>
+<a id="SV" href="svg.html">SVG</a>
+<a href="visualizationImage.html">Visualization Image</a>
+</div>
+
+
+<svg id="triangle" width="100px" height="100px">
+<polygon points="50,0 100,100 0,100" fill="orange"/>
+</svg>
+
+<svg id="circle" width="100px" height="100px">
+<circle cx="50" cy="50" r="40" fill="deeppink"/>
+</svg>
+
+<svg id="rect" width="100px" height="70px">
+<rect x="10" y="10" width="80" height="50" stroke="sienna" stroke-width="2" />
+<text x="28" y="40" fill="sienna">SVG</text>
+</svg>
+
+</body>
+</html>
